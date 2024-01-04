@@ -1,0 +1,1 @@
+# Text tool for Bioshock 2 localizedxxx.lbf files.

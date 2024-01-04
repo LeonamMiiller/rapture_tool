@@ -1,0 +1,410 @@
+[Errors]
+NetOpen=Erro ao abrir este arquivo
+NetWrite=Erro de escritura de arquivo
+NetRefused=O servidor se nega a enviar: '%s'
+NetClose=Erro ao carregar arquivo
+NetSize=O tamanho do arquivo não coinside
+NetMove=Erro ao mover arquivo
+NetInvalid=Solicitação de arquivo recebido inválida
+NoDownload=O pacote '%s' não pode ser transferido
+DownloadFailed=falha no download do pacote '%s': %s
+RequestDenied=Solicitação de arquivo pendente para o servidor: recusado
+ConnectionFailed=falha na conexão
+ChAllocate=Não foi possivel conectar ao canal
+ChAllocate=Não foi possivel conectar ao canal
+NetAlready=Já está em rede
+NetListen=Erro ao escutar: não há um contexto de ligação
+LoadEntry=Não foi possivel carregar a entrada: %s
+InvalidUrl=URL inválida: %s
+InvalidLink=Link inválido: %s
+FailedBrowse=Erro ao entrar %s: %s
+Listen=Erro ao escutar: %s
+AbortToEntry=Falhou; retornando ao começo
+ServerOpen=Os servidores não puderam conectar a uma rede
+ServerListen=O servidor dedicado não pode escutar: %s
+Pending=Conexão pendente a '%s' falida; %s
+LoadPlayerClass=Erro ao carregar a classe do jogador
+ServerOutdated=A versão do servidor está desatualizada
+
+[HUD]
+HardDriveHasTooLittleSpace=Não há espaço em disco o suficiente no dispositivo de armazenamento. Faltam %i Mb de espaço livre para criar os dados de jogo. Saia do jogo e libere espaço o suficiente para continuar.
+HardDriveHasTooLittleSaveDataSpace=Não há espaço em disco o suficiente no dispositivo de armazenamento. Faltam %i Mb de espaço livre para salvar os dados. Saia do jogo e libere espaço o suficiente para continuar.
+HardDriveHasTooLittleSpacePSN=Não há espaço em disco o suficiente no dispositivo de armazenamento. Faltam %i Mb de espaço livre para criar os dados de troféus.
+HardDriveHasTooLittleSaveDataSpacePSN=Não há espaço em disco o suficiente no dispositivo de armazenamento. Faltam %i Mb de espaço livre para salvar os dados.
+LoadingMessage="CARREGANDO..."
+SavingMessage="SALVANDO"
+CannotSaveDueToOwner=Não pode salvar o jogo porque não é o dono dos dados carregados.
+ControllerUnplugged=O controle foi desconectado. Conecte o controle novamente.
+ConnectingMessage="CONECTANDO"
+ControllerUnpluggedOrbis=O controle sem fio foi desconectado. Conecte o controle novamente.
+NotFullVersionNX=Se requiere el juego completo. No se puede continuar hasta que el juego esté completamente instalado.
+
+[Progress]
+CancelledConnect=Tentativa de conexão cancelada
+RunningNet=%s: %s (%i jogadores)
+NetReceiving=Recebendo '%s': %i/%i
+NetReceiveOk=Recebido com exito '%s'
+NetSend=Enviando '%s'
+NetSending=Enviando '%s': %i/%i
+Connecting=Conectando...
+Listening=Buscando jogadores...
+Loading=Carregando
+Saving=Salvando
+Paused=Pausado por %s
+ReceiveFile=Recebendo '%s' (F10 para cancelar):
+ReceiveOptionalFile=Recebendo arquivo opicional '%s' (aperte F10 para permitir)
+ReceiveSize=Tamanho %iK, Terminado %3.1f%%
+ConnectingText=Conectando (F10 para cancelar):
+ConnectingURL=unreal://%s/%s
+
+[Console]
+ClassCaption=Consola Unreal standard
+ConnectingMessage=CONECTANDO
+PausedMessage=PAUSADO
+PrecachingMessage=Precacheando
+ChatChannel=(CHAT)
+TeamChannel=(EQUIPE)
+
+[MasterMD5Commandlet]
+HelpCmd=mastermd5
+HelpOneLiner=Manipular a base de dados mestre MD5
+HelpUsage=mastermd5 [-option..] <params>
+HelpWebLink=http://unreal.epicgames.com/servertips.htm
+HelpParm[0]=-c
+HelpDesc[0]=Criar uma nova base de dados MD5
+HelpParm[1]=-a
+HelpDesc[1]=Acrescentar novos pacotes ao banco de dados
+HelpParm[2]=-s
+HelpDesc[2]=Mostrar a base de dados atual.
+HelpParm[3]=-r
+HelpDesc[3]=Forçar a revisão de todas as entradas <param>
+
+[General]
+Upgrade=Para entrar neste servidor, necessita da atálização mais recente do Unreal, disponivel no site da Epic:
+UpgradeURL=http://www.unreal.com/upgrade
+UpgradeQuestion=Você quer ir para a pagina inicial de melhorias no seu navegador?
+Version=Brazilian-Warriors - Versão %i
+
+[Menu]
+HelpMessage=
+MenuList=
+LeftString=Esquerda
+RightString=Direita
+CenterString=Centro
+EnabledString=Ativado
+DisabledString=Desativado
+HelpMessage[1]="Este menu ainda não está implementado."
+YesString=Sim
+NoString=Não
+
+[Inventory]
+PickupMessage=Pegou um objeto
+M_Activated="ativado"
+M_Selected="selecionado"
+M_Deactivated="desativado"
+ItemArticle=A
+
+[WarpZoneInfo]
+OtherSideURL=
+
+[GameInfo]
+SwitchLevelMessage=Alterando níveis
+DefaultPlayerName=Jogador
+LeftMessage="abandonou a partida."
+FailedSpawnMessage=Não foi possivel encontrar o autor da partida
+FailedPlaceMessage=Não foi possivel encontrar o posto inicial (o nível poderia necessitar de um ato 'PlayerStart')
+NameChangedMessage=Nome alterado para
+EnteredMessage="unio-se a partida."
+GameName="Partida"
+MaxedOutMessage="O servidor já está com a capacidade máxima."
+WrongPassword=A senha introduzida não está correta.
+NeedPassword=Você deve introduzir uma senha para unir-se a esta partida
+FailedTeamMessage=Não foi possivel encontrar uma equipe para o jogador.
+bAlternateMode=Falso
+
+[LevelInfo]
+Title=Sem título
+MapUIRegions=()
+MapHUDRegions=()
+
+[Weapon]
+MessageNoAmmo="não tem munição."
+PickupMessage=Tem uma arma
+DeathMessage=%k matou %o com sua %w
+ItemName=Arma
+DeathMessage[0]=%k matou %o com sua %w
+DeathMessage[1]=%k matou %o com sua %w
+DeathMessage[2]=%k matou %o com sua %w
+DeathMessage[3]=%k matou %o com sua %w
+
+[Counter]
+CountMessage=Resta %i mas...
+CompleteMessage=Terminado!
+
+[Ammo]
+PickupMessage=Você possui munição.
+
+[Pickup]
+ExpireMessage=
+
+[SpecialEvent]
+DamageString=
+
+[DamageType]
+Name=morto
+AltName=morto
+DeathString="%o morreu nas mãos de %k."
+FemaleSuicide="%o foi morto."
+MaleSuicide="%o foi morto."
+
+[PlayerPawn]
+QuickSaveString=Salvando rápido
+NoPauseMessage=Você não pode parar o jogo.
+ViewingFrom=Vista de
+OwnCamera=Própria camêra
+FailedView=Não foi possivel alterar a visão.
+CantChangeNameMsg=Você não pode mudar o nome durante uma partida global
+
+[Pawn]
+NameArticle="A"
+
+[Spectator]
+MenuName=Espectador
+
+[ServerCommandlet]
+HelpCmd=mastermd5
+HelpOneLiner=Servidor de jogo da rede
+HelpUsage=server map.unr[?game=gametype] [-option...] [parm=value]...
+HelpWebLink=http://unreal.epicgames.com/servertips.htm
+HelpParm[0]=-c
+HelpDesc[0]=Especificar o arquivo de registro para gerar
+HelpParm[1]=-a
+HelpDesc[1]=Dar a todos os jogadores previlégios do adiministrador
+
+[KeyNames]
+LeftMouse=MOUSE ESQ.
+RightMouse=MOUSE DIR.
+MiddleMouse=MOUSE MEIO
+Tab=Tab
+Enter=Enter
+Shift=SHIFT
+Ctrl=Ctrl
+Alt=ALT
+Pause=Pausa
+CapsLock=CAPSLOCK
+Escape=Esc
+Space=BARRA DE ESP
+PageDown=PAGE DOWN
+End=End
+Left=Esquerda
+Up=Cima
+Right=Direita
+Down=Atrás
+Insert=Insert
+Delete=Delete
+Equals=Igual
+Comma=Coma
+Backspace=Backspace
+PageUp=PAGE UP
+home=Home
+Select=Select
+Print=Print
+Execute=Executar
+PrintScrn=Print Screen
+Help=Ajuda
+GreyStar=Asterisco (num.)
+Separator=Separador
+NumPadPeriod=Ponto  (Teclado num.)
+GreySlash=Barra (Teclado num.)
+NumLock=NUMLOCK
+ScrollLock=Scroll Lock
+LShift=SHIFT ESQUERDO
+RShift=SHIFT DIREITO
+LControl=Ctrl esquerdo
+RControl=Ctrl direito
+Attn=Attn
+GreyMinus=Num -
+GreyPlus=Num +
+GreyPlus=Num +
+NumPad0=Num 0
+NumPad1=Num 1
+NumPad2=Num 2
+NumPad3=Num 3
+NumPad4=Num 4
+NumPad5=Num 5
+NumPad6=Num 6
+NumPad7=Num 7
+NumPad8=Num 8
+NumPad9=Num 9
+
+MouseWheelDown=RODA PARA BAIXO
+MouseWheelUp=RODA PARA CIMA
+Joy1=Joy 1
+Joy2=Joy 2
+Joy3=Joy 3
+Joy4=Joy 4
+Joy5=Joy 5
+Joy6=Joy 6
+Joy7=Joy 7
+Joy8=Joy 8
+Joy9=Joy 9
+Joy10=Joy 10
+Joy11=Joy 11
+Joy12=Joy 12
+Joy13=Joy 13
+Joy14=Joy 14
+Joy15=Joy 15
+Joy16=Joy 16
+JoyX=Joy X
+JoyY=Joy Y
+JoyZ=Joy Z
+JoyR=Joy R
+JoyU=Joy U
+JoyV=Joy V
+JoySlider1=Barra Deslizante Joy 1
+JoySlider2=Barra Deslizante Joy 2
+
+[AccessControl]
+IPBanned="Seu endereço de IP foi banido deste servidor."
+WrongPassword="A senha digitada não está correta."
+NeedPassword="Você deve digitar uma senha para entrar nesta partida."
+InvalidOptions="As opções especificadas são inválidas."
+
+[Crushed]
+DeathString="%o foi esmagado por %k."
+FemaleSuicide="%o foi esmagado."
+MaleSuicide="%o foi esmagado."
+
+[DamTypeTelefragged]
+DeathString="%o foi assasinado a distancia por %k."
+FemaleSuicide="%o foi assasinado a distancia por %k."
+MaleSuicide="%o foi assasinado a distancia por %k."
+
+[FailedConnect]
+failmessage[0]="IMPOSSIVEL CONECTAR-SE A PARTIDA. SENHA NECESSÁRIA."
+failmessage[1]="IMPOSSIVEL CONECTAR-SE A PARTIDA. SENHA INCORRETA."
+failmessage[2]="IMPOSSIVEL CONECTAR-SE A PARTIDA. A PARTIDA JÁ COMEÇOU."
+failmessage[3]="IMPOSSIVEL CONECTAR-SE A PARTIDA."
+
+[FellLava]
+DeathString="%o foi atirado."
+FemaleSuicide="%o foi atirado."
+MaleSuicide="%o foi atirado."
+
+[FlashGUIController]
+FailedToRebindFormatString="Não foi possivel nomear a chave reservada '%s' - escolha outra, por favor."
+UnboundKeyText="(Não atribuído)"
+VersionText="Brazilian-Warriors - Versão"
+
+[GameMessage]
+SwitchLevelMessage="Alterações dos níveis"
+LeftMessage="abandonou a partida."
+FailedTeamMessage="Não foi possivel encontrar uma equipe para o jogador."
+FailedPlaceMessage="Não foi possivel achar uma posição inicial."
+FailedSpawnMessage="Não foi possivel fazer o jogador conectar."
+EnteredMessage="juntou-se a partida."
+MaxedOutMessage="O servidor está com a capacidade máxima."
+OvertimeMessage="Empatados em pontos na regulamentação do tempo final. Prorrogação de desempate!"
+GlobalNameChange="mudou seu nome para"
+NewTeamMessage="está dentro agora"
+NoNameChange="Este nome já está em uso."
+VoteStarted="foi iniciado uma votação."
+VotePassed="Votação aprovada."
+MustHaveStats="As estatísticas devem ser habilitadas para aderir a este servidor."
+NewPlayerMessage="Um novo jogador uniu-se a partida."
+
+[gibbed]
+deathstring="%o explodio em pedaços."
+femalesuicide="%o explodio em pedaços."
+malesuicide="%o explodio em pedaços."
+
+[mutator]
+description="Descrição"
+friendlyname="Mutador"
+
+[PCOptionsData]
+GraphicsQuality="Qualidade gráfica"
+Resolution="Resolução"
+Widescreen=" (Widescreen)"
+TextureDetail="Detalle das texturas"
+ActorDetail="Detalhes dos bonecos"
+WindowedMode="Modo janela"
+ShadowMap="Mapas das sombras"
+HighDetailPostEffects="Pós processamento de AQ"
+HighDetailShaders="Shaders de alto detalhe"
+RealTimeReflection="Reflexos em tempo real"
+Distortion="Distorção"
+VSync="Sincronia vertical"
+GlobalLighting="Forçar iluminação global"
+DX10Enhancements="Melhorias de DirectX 10"
+Anisotropic="Filtro anisotrópico"
+Antialiasing="Anti serrilhado"
+HorizontalFOVLock="Campo de visão expandido"
+InvertMouse="Inverter Mouse"
+MouseSensitivity="Sensibilidade"
+UseXBoxController="Usar controle de XBOX"
+SpeakerModes=("Mono","Estéreo","Quadrafônico","Surround","5.1","7.1","Pro Logic")
+SpeakerMode="Tipo de som"
+SFXVolume="Efeitos"
+MusicVolume="Músicas"
+VoVolume="Vozes"
+MasterVolume="Geral"
+UseReverb="Usar efeito de ressonância"
+EAXEnabled="Usar Creative EAX Audio"
+DifficultyModes=("Fácil","Médio","Difícil","Sobrevivente")
+Difficulty="Dificuldade"
+AutoAim="Mira automática"
+UseRumble="Vibração"
+AdaptiveTraining="Treinamento adaptativo"
+Subtitles="Legendas de diálogos"
+ArtSubtitles="Legendas gráficas"
+NoVitaChamber="Desativar Câmara vital"
+QuestArrow="Flecha do objetivo"
+Shimmer="Objetos brilhantes"
+Highlight="Realçar objetos usáveis"
+HighText="Alto"
+MediumText="Médio"
+LowText="Baixo"
+CustomText="Personalizado"
+OnText="SIM"
+OffText="NÃO"
+MasterVolume="Geral"
+MouseScale="Escala do cursor do Mouse"
+RippleSystem="Gotas de água"
+MaintainUIScale="Manter IU com proporção da tela"
+SyncMouseToFramerate="Sincronizar ratón con tasa de actualización"
+MouseAccel="Aceleração do mouse"
+MouseSmooth="Suavização do mouse"
+AudioChannels="Canais de audio"
+
+[PlayerController]
+QuickSaveString="Salvando rápido"
+NoPauseMessage="Você não pode parar o jogo."
+ViewingFrom="Vista de"
+OwnCamera="Vista de sua própria câmera."
+GamePlusSavePrefix="+Novo jogo:"
+
+[PlayerReplicationInfo]
+StringDead="Morto"
+StringSpectating="Espectador"
+StringUnknown="Desconhecido"
+
+[suicided]
+deathstring="%o teve aneurisma."
+femalesuicide="%o teve aneurisma."
+malesuicide="%o teve um aneurisma."
+
+[TeamInfo]
+TeamName="Equipe"
+ColorNames[0]="Vermelho"
+ColorNames[1]="Azul"
+ColorNames[2]="Verde"
+ColorNames[3]="Dourado"
+
+[Volume]
+LocationName="indeterminado"
+
+[fell]
+DeathString="%o ha muerto a manos de %k."
+FemaleSuicide="%o ha muerto a manos de %k."
+MaleSuicide="%o ha muerto a manos de %k."
