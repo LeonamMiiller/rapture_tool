@@ -18,7 +18,7 @@ class RaptureSwitch extends Bioshock {
 
       final List<int> header = file.readSync(headerLenght);
 
-      final int fileLenght = file.readUint32;
+      final int fileLenght = file.readUint32();
       final List<int> inifile = file.readSync(fileLenght);
 
       iniFile.add(
