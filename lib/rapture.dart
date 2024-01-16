@@ -1,5 +1,4 @@
 import 'package:bw_utils/bw_utils.dart';
-import 'package:charset/charset.dart';
 import 'package:path/path.dart';
 import 'package:rapture_tool/model/bioshock_model.dart';
 
@@ -8,7 +7,6 @@ class Rapture extends Bioshock {
 
   Rapture({required super.file}) {
     coalescedFileName = basenameWithoutExtension(file.path);
-    Utf16Decoder decoder = utf16.decoder as Utf16Decoder;
 
     file.setPositionSync(0);
 

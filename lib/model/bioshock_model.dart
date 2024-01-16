@@ -9,6 +9,9 @@ import 'package:rapture_tool/rapture_switch.dart';
 abstract class Bioshock {
   late RandomAccessFile file;
   late String coalescedFileName;
+  final Utf16Encoder encoder = Utf16Encoder();
+  final Utf16Decoder decoder = Utf16Decoder();
+
   List<CoalescedIniFile> iniFile = [];
 
   Bioshock({required this.file});
@@ -55,11 +58,10 @@ abstract class Bioshock {
   }
 
   List<int> _fileNameToHeader(String fileName) {
-    Utf16Encoder encoder = utf16.encoder as Utf16Encoder;
     List<int> header = [];
 
     if (this is Rapture) {
-      header.addAll(encoder.encodeUtf16Be(fileName));
+      header.addAll(encoder.encodeUtf16Be(fileName));      
     }
 
     if (this is RaptureSwitch) {

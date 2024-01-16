@@ -1,5 +1,4 @@
 import 'package:bw_utils/bw_utils.dart';
-import 'package:charset/charset.dart';
 import 'dart:typed_data';
 import 'package:path/path.dart';
 import 'package:rapture_tool/model/bioshock_model.dart';
@@ -7,8 +6,7 @@ import 'package:rapture_tool/model/bioshock_model.dart';
 class RaptureSwitch extends Bioshock {
   RaptureSwitch.create(super.path) : super.newFile();
 
-  RaptureSwitch({required super.file}) {
-    Utf16Decoder decoder = utf16.decoder as Utf16Decoder;
+  RaptureSwitch({required super.file}) {    
     coalescedFileName = basenameWithoutExtension(file.path);
     setEndian(Endian.little);
 
