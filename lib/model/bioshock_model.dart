@@ -14,17 +14,19 @@ abstract class Bioshock {
   Bioshock({required this.file});
 
   Bioshock.newFile(Directory path) {
-    final String newFilePath = split(path.path).last;
-
     for (final inifile in path.listSync()) {
-      final String fileName = basename(inifile.path);
-      final List<int> header = _fileNameToHeader(fileName);
-      final List<int> newFile = (inifile as File).readAsBytesSync();
-      iniFile.add(
-          CoalescedIniFile(fileName: fileName, header: header, file: newFile));
-    }
+      if (iniFile is File) {
+        final String fileName = basename(inifile.path);
+        final List<int> header = _fileNameToHeader(fileName);
+        final List<int> newFile = (inifile as File).readAsBytesSync();
 
-     _saveNewFile('$newFilePath.lbf');
+        iniFile.add(CoalescedIniFile(
+            fileName: fileName, header: header, file: newFile));
+      }
+    }
+    if (iniFile.length > 0) {
+      _saveNewFile('${path.path}.lbf');
+    }
   }
 
   void export() {
@@ -56,7 +58,7 @@ abstract class Bioshock {
     Utf16Encoder encoder = utf16.encoder as Utf16Encoder;
     List<int> header = [];
 
-    if (this is Rapture) {      
+    if (this is Rapture) {
       header.addAll(encoder.encodeUtf16Be(fileName));
     }
 
@@ -64,7 +66,7 @@ abstract class Bioshock {
       header.addAll(encoder.encodeUtf16Le(fileName));
     }
 
-    return header..addAll([0,0]);
+    return header..addAll([0, 0]);
   }
 
   void _saveNewFile(String path) {
