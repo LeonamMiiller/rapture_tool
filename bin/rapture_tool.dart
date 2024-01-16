@@ -6,7 +6,6 @@ import 'package:rapture_tool/rapture_switch.dart';
 import 'utils.dart';
 
 void main(List<String> args) {
-  
   final valid = Valid(args: args);
 
   if (valid.canExport()) {
@@ -15,6 +14,10 @@ void main(List<String> args) {
 
   if (valid.canImport()) {
     _import(valid.platform, File(args[2]).openSync());
+  }
+
+  if (valid.canCreate()) {
+    _create(valid.platform, args[2]);
   }
 }
 
@@ -33,5 +36,14 @@ void _export(String platform, RandomAccessFile file) {
   }
   if (platform == '-px') {
     Rapture(file: file).export();
+  }
+}
+
+void _create(String platform, String path) {
+  if (platform == '-nx') {
+    RaptureSwitch.create(Directory(path));
+  }
+  if (platform == '-px') {
+    Rapture.create(Directory(path));
   }
 }

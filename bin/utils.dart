@@ -2,13 +2,14 @@ import 'dart:io';
 import 'package:path/path.dart';
 
 class Valid {
-  final List<String> _executionParam = ['-i', '-e'];
+  final List<String> _executionParam = ['-i', '-e', '-c'];
   final List<String> _platformsParam = ['-nx', '-px'];
   final List<String> _args;
   late int length;
   late bool containValidParams;
   late bool isImport;
   late bool isExport;
+  late bool isCreate;
   late bool fileExists;
   late bool dirExists;
   late String platform;
@@ -18,6 +19,7 @@ class Valid {
         _platformsParam.contains(_args[1]);
     isImport = containValidParams && _args[0] == '-i';
     isExport = containValidParams && _args[0] == '-e';
+    isCreate = containValidParams && _args[0] == '-c';
     fileExists = containValidParams && File(_args[2]).existsSync();
     dirExists = fileExists &&
         Directory('${dirname(_args[2])}/${basenameWithoutExtension(_args[2])}')
@@ -69,14 +71,33 @@ class Valid {
     return youCan;
   }
 
+    bool canCreate() {
+    bool youCan = false;
+    if (length == 3) {
+      if (containValidParams) {
+        if (isCreate) {
+
+            youCan = true;
+        }
+      } else {
+        printFailMessage(msgCod: 1);
+      }
+    } else {
+      printFailMessage(msgCod: 1);
+    }
+    return youCan;
+  }
+
   void printFailMessage({int msgCod = 0}) {
     switch (msgCod) {
       case 1:
         print('invalid params: \nHow to use: \n ');
         print('to import Nintendo Switch: -i -nx file/path/file.lbf');
         print('to export Nintendo Switch: -e -nx file/path/file.lbf');
+        print('to create Nintendo Switch: -c -nx file/path/');
         print('to import XBOX360/PS3: -i -px file/path/file.lbf');
         print('to export XBOX360/PS3: -e -px file/path/file.lbf');
+        print('to create XBOX360/PS3: -c -px file/path/');
         break;
       case 2:
         print('Bioshock 2 localizedXXX.lbf file not found');
