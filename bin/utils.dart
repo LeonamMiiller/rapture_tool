@@ -14,17 +14,23 @@ class Valid {
   late bool dirExists;
   late String platform;
   Valid({required List<String> args}) : _args = args {
-    length = _args.length;
-    containValidParams = _executionParam.contains(_args[0]) &&
-        _platformsParam.contains(_args[1]);
-    isImport = containValidParams && _args[0] == '-i';
-    isExport = containValidParams && _args[0] == '-e';
-    isCreate = containValidParams && _args[0] == '-c';
-    fileExists = containValidParams && File(_args[2]).existsSync();
-    dirExists = fileExists &&
-        Directory('${dirname(_args[2])}/${basenameWithoutExtension(_args[2])}')
-            .existsSync();
-    platform = _args[1];
+    if ((args.isNotEmpty) && (args.length == 3)) {
+      length = _args.length;
+      containValidParams = _executionParam.contains(_args[0]) &&
+          _platformsParam.contains(_args[1]);
+      isImport = containValidParams && _args[0] == '-i';
+      isExport = containValidParams && _args[0] == '-e';
+      isCreate = containValidParams && _args[0] == '-c';
+      fileExists = containValidParams && File(_args[2]).existsSync();
+      dirExists = fileExists &&
+          Directory(
+                  '${dirname(_args[2])}/${basenameWithoutExtension(_args[2])}')
+              .existsSync();
+      platform = _args[1];
+    } else {
+      printFailMessage(msgCod: 1);
+      exit(0);
+    }
   }
 
   bool canImport() {
@@ -71,13 +77,12 @@ class Valid {
     return youCan;
   }
 
-    bool canCreate() {
+  bool canCreate() {
     bool youCan = false;
     if (length == 3) {
       if (containValidParams) {
         if (isCreate) {
-
-            youCan = true;
+          youCan = true;
         }
       } else {
         printFailMessage(msgCod: 1);
